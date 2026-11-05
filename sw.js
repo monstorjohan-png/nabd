@@ -3,7 +3,7 @@
    والملاحة شبكة أولاً مع بديل من الكاش عند الانقطاع. */
 'use strict';
 
-var VERSION = 'nabd-v1';
+var VERSION = 'nabd-v2';
 var CORE = [
   './',
   './index.html',
