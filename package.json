@@ -1,0 +1,10 @@
+{
+  "name": "nabd-game",
+  "version": "1.0.0",
+  "private": true,
+  "description": "نبض — لعبة انتباه وإيقاع للويب",
+  "scripts": {
+    "test": "node test/engine.test.js && node test/wiring.test.js",
+    "serve": "npx --yes serve . -l 4173"
+  }
+}

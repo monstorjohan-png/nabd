@@ -1,0 +1,3 @@
+# ملف ads.txt الخاص بـGoogle AdSense
+# بعد قبول حسابك، احذف علامة # من السطر التالي واستبدل pub-XXXXXXXXXXXXXXXX بمعرّف ناشرك.
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

@@ -1,0 +1,21 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log*
+desktop/dist/
+desktop/node_modules/
+
+# Local server / temp
+*.log
+.sh_*
+
+# Editor
+.vscode/
+.idea/
+
+# Temp screenshots (keep assets clean)
+assets/shot-*.png
+assets/og-card.html

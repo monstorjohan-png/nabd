@@ -1,0 +1,52 @@
+{
+  "name": "nabd-desktop",
+  "version": "1.0.0",
+  "description": "نبض — تطبيق Windows (Electron)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win --x64",
+    "build:portable": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.nabd.game",
+    "productName": "نبض",
+    "directories": { "output": "dist" },
+    "files": [
+      "main.js",
+      "preload.js",
+      "../index.html",
+      "../games.html",
+      "../game-*.html",
+      "../css/**",
+      "../js/**",
+      "../assets/**",
+      "../manifest.webmanifest",
+      "../sw.js",
+      "../404.html",
+      "../about.html",
+      "../how-to.html",
+      "../science.html",
+      "../privacy.html",
+      "../terms.html",
+      "../sitemap.xml",
+      "../robots.txt",
+      "../ads.txt"
+    ],
+    "win": {
+      "target": ["nsis", "portable"],
+      "icon": "../assets/icon-512.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "نبض"
+    }
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.0"
+  }
+}
