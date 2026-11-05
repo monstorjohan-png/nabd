@@ -48,7 +48,13 @@ var pages = ['index.html', 'how-to.html', 'science.html', 'about.html', 'privacy
   'game-delayed-gratification.html', 'game-time-estimation.html', 'game-categorization.html',
   'game-serial-reaction.html', 'game-perceptual-discrimination.html', 'game-probability.html',
   'game-dual-task.html', 'game-error-monitoring.html', 'game-pattern-matching.html',
-  'game-alternating-attention.html'];
+  'game-alternating-attention.html', 'game-cpt.html', 'game-digit-span.html',
+  'game-wcst.html', 'game-stop-signal.html', 'game-ior.html', 'game-mot-occlusion.html',
+  'game-anchoring.html', 'game-odd-one-out.html', 'game-mental-rotation.html',
+  'game-nback.html', 'game-semantic-priming.html', 'game-number-line.html',
+  'game-conflict-monitoring.html', 'game-anticipation.html', 'game-post-error-slowing.html',
+  'game-attentional-blink.html', 'game-serial-position.html', 'game-false-memory.html',
+  'game-change-detection.html', 'game-popout-search.html'];
 pages.forEach(function (page) {
   var html = read(page);
   ok(page + ': لغة عربية واتجاه RTL', /<html lang="ar" dir="rtl">/.test(html));
