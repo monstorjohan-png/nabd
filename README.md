@@ -120,4 +120,4 @@ assets/
 
 - النموذج البصري (FreeLLMAPI) غير موثوق (يحوّل إلى openrouter/free). تحقّق من التصميم عبر `assets/shot-*` محلياً.
 - `hello@example.com` placeholder — استبدله ببريدك قبل النشر.
-- `canonical` URL placeholder `https://example.com/` — استبدله بـ domainك.
+- `canonical` URL placeholder `https://monstorjohan-png.github.io/nabd/` — استبدله بـ domainك.

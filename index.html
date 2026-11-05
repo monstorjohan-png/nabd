@@ -7,7 +7,7 @@
   <meta name="description" content="نبض لعبة ويب مجانية للانتباه والإيقاع: اضغط في اللحظة التي يعبر فيها النبض الهدف. تحدٍّ يومي من 30 نبضة ولعب حر بصعوبة تتكيّف مع مستواك. بلا تحميل وبلا حساب.">
   <meta name="theme-color" content="#08080b">
   <meta name="color-scheme" content="dark">
-  <link rel="canonical" href="https://example.com/">
+  <link rel="canonical" href="https://monstorjohan-png.github.io/nabd/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="نبض — لعبة انتباه وإيقاع">
   <meta property="og:description" content="اضغط في اللحظة التي يعبر فيها النبض الهدف. تحدٍّ يومي من 30 نبضة، ولعب حر بصعوبة تتكيّف معك.">
@@ -279,6 +279,30 @@
 
   <script src="js/engine.js" defer></script>
   <script src="js/game.js" defer></script>
+  <script>
+    (function () {
+      var deferredPrompt = null;
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault();
+        deferredPrompt = e;
+        if (document.getElementById('installBanner')) return;
+        var b = document.createElement('div');
+        b.id = 'installBanner';
+        b.style.cssText = 'position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:60;background:rgba(13,13,18,0.95);border:1px solid rgba(217,255,74,0.34);backdrop-filter:blur(14px);border-radius:14px;padding:10px 14px;display:flex;align-items:center;gap:10px;box-shadow:0 20px 60px rgba(0,0,0,0.5);font-size:0.875rem;';
+        b.innerHTML = '<span style="color:#ececf1;">ثبّت «نبض» على جهازك</span><button id="installBtn" style="background:#d9ff4a;color:#0a0a0c;border:0;border-radius:8px;padding:6px 12px;font-weight:700;cursor:pointer;">تثبيت</button><button id="installDismiss" style="background:transparent;border:0;color:#71717f;cursor:pointer;font-size:1.1rem;">×</button>';
+        document.body.appendChild(b);
+        document.getElementById('installBtn').addEventListener('click', function () {
+          if (!deferredPrompt) return;
+          deferredPrompt.prompt();
+          deferredPrompt.userChoice.then(function () { deferredPrompt = null; b.remove(); });
+        });
+        document.getElementById('installDismiss').addEventListener('click', function () { b.remove(); });
+      });
+      window.addEventListener('appinstalled', function () {
+        var b = document.getElementById('installBanner'); if (b) b.remove();
+      });
+    })();
+  </script>
   <script>
     if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
       window.addEventListener('load', function () {
