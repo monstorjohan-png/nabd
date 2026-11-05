@@ -7,22 +7,26 @@
 2. أيقونة «تثبيت» في شريط العنوان (أو قائمة ⋮ → «تثبيت نبض»).
 3. يظهر في قائمة Start وسطح المكتب، يعمل offline.
 
-## 2. Electron (نسخة .exe حقيقية)
+## 2. Electron (نسخة .exe حقيقية) — جاهز الآن
 
-### المتطلبات
-- Node.js 18+ (مثبّت لديك).
-- ~200 MB لتحميل Electron (مرة واحدة).
+تم تثبيت Electron runtime (v40) في `E:\nabd-runtime\` (بدون Arabic في المسار).
+التطبيق **يعمل الآن** مع جميع 21 لعبة.
 
-### البناء (في `desktop/`)
+### التشغيل
+- **اختصار Desktop:** `NABD.lnk` (على سطح المكتب)
+- **أو:** `E:\sites\nabd\desktop\launch.bat`
+- **أو مباشرة:** `E:\nabd-runtime\electron.exe E:\sites\nabd\desktop`
+
+### البناء (installer .exe) — اختياري
 ```powershell
 cd E:\sites\nabd\desktop
-npm install
+npm install   # يحتاج إنترنت (~200MB)
 npm run build:win   # ينتج installer في dist/
 ```
 
 ### portable (بدون installer)
 ```powershell
-npm start   # يشغّل التطبيق مباشرة
+E:\nabd-runtime\electron.exe E:\sites\nabd\desktop
 ```
 
 ### ملاحظات
