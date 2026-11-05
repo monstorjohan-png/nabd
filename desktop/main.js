@@ -21,7 +21,7 @@ function createWindow() {
   });
 
   // تحميل index.html من الملفات المحلية (offline)
-  mainWindow.loadFile(path.join(__dirname, '..', 'index.html'));
+  mainWindow.loadFile(path.join(__dirname, '..', 'games.html'));
 
   // قائمة مبسّطة
   const menu = Menu.buildFromTemplate([

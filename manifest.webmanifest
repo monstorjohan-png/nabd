@@ -4,7 +4,7 @@
   "description": "اضغط في اللحظة التي يعبر فيها النبض الهدف. تحدٍّ يومي من 30 نبضة ولعب حر بصعوبة تتكيّف معك.",
   "lang": "ar",
   "dir": "rtl",
-  "start_url": "./index.html",
+  "start_url": "./games.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
